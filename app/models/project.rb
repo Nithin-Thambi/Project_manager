@@ -1,3 +1,6 @@
 class Project < ApplicationRecord
-    has_many :tasks, dependent: :destroy
+    has_many :tasks, inverse_of: :project, dependent: :destroy
+    accepts_nested_attributes_for :tasks, reject_if: :all_blank, allow_destroy: true
+
+    validates :p_name, :p_description, presence: true
 end

@@ -1,0 +1,8 @@
+
+<%= @project.errors.each do |e| %>
+    <p>
+    <%="error:: #{e.attribute} is #{e.type}"%>
+    </p>
+  <% end %>
+<h1 class="main-head">Create New Project</h1>
+<%= render 'form'%>

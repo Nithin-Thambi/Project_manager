@@ -1,15 +1,128 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+*{margin: 0;
+padding: 0;}
+
+.row {
+ width: 85vw;
+ display: flex;
+ padding: 10px 10px;
+}
+
+.container2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-head{
+    width: 100vw;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px 0 30px 0;
+    font-size: x-large;
+}
+
+.row-item1{
+    width: 60%;
+}
+.row-item2{
+    width: 20%;
+}
+
+.head-row{
+    background-color: rgb(39, 41, 41);
+    color: azure;
+    font-size: larger;
+    font-weight: 500;
+}
+
+.pag{
+    margin-top: 30px;
+}
+
+.btn{
+
+    background-color: rgb(15, 226, 110);
+    text-align: center;
+}
+
+.btn a, .btn2 a{
+    color: white;
+    text-decoration: none
+}
+
+.btn2{
+    background-color: rgb(250, 23, 15);
+    text-align: center;
+    margin-left: 5px;
+}
+
+.links{
+    display: flex;
+}
+
+.s1{
+    font-weight: 700;
+    margin: 20px 0;
+    width: 150px;
+    padding: 10px;
+
+}
+.s2{
+    font-size: small;
+    width: 80px;
+    padding: 5px;
+}
+
+.s3{
+    font-size: small;
+    width: 120px;
+    padding: 5px; 
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.form-wrapper{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field{
+    display: flex;
+}
+
+.label{
+    width: 200px;
+}
+
+.nested-fields{
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+
+.task{
+    margin: 50px 0px 20px 100px;
+}
+
+.item{
+    margin: 7px 0;
+}
+
+.text-box{
+    width: 300px;
+    padding: 5px;
+}
+
+.text-area{
+    width: 300px;
+    padding: 5px;
+}
+
+.submit{
+    margin-left: 20px;
+    background-color: red;
+    color: white;
+    width: 130px;
+    padding:  5px 10px;
+    border: none;
+}
