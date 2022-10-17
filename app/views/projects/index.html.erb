@@ -1,0 +1,29 @@
+
+<div class="container">
+    <h1 class="main-head"> Project Management Tool</h1>
+    <div class = "container2">
+        <div class="row head-row">
+            <div class="row-item1"> <p>Project Name</p></div>
+            <div class="row-item2"> <p>No of Tasks</p> </div>
+            <div class="row-item2"> </div>
+            
+        </div>
+        <% @projects.each do |project| %>
+        <div class="row">
+                <div class="row-item1"> <p><%= project.p_name %></p></div>
+                <div class="row-item2"> <p><%=project.tasks.count%></p> </div>
+                <div class="row-item2 links">
+                 <div class="btn s2"><%=link_to "Edit", edit_project_path(project.id) %></div>
+                 <div class=" btn2 s2"><%=link_to "Delete", project_path(project.id), data: { turbo_method: :delete } %></div>
+                </div>
+        </div>
+        <% end %>
+        <div class="pag">   
+             <%= paginate @projects %>
+        <div>
+
+        <div class="btn s1">
+            <%=link_to "Add New Project", new_project_path %>
+        </div>
+    </div>
+</div>

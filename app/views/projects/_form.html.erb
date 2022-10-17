@@ -1,0 +1,25 @@
+<%= form_for @project do |f| %>
+  <div class="form-wrapper">
+      <div class="field">
+        <%= f.label "Project Name", class: "label item" %>
+        <br/>
+        <%= f.text_field :p_name, class: "text-box item" %>
+      </div>
+      <div class="field">
+        <%= f.label "Project Description", class: "label item" %>
+        <br/>
+        <%= f.text_area :p_description, class: "text-area item" %>
+      </div>
+      <h2 class="task">Tasks</h2>
+      <div id='tasks'>
+        <%= f.fields_for :tasks do |task| %>
+          <%= render 'task_fields', :f => task %>      <% end %>
+        <div class='btn s3'>
+          <%= link_to_add_association 'add task', f, :tasks %>
+        </div>
+      </div>
+      <div>
+        <%= f.submit 'Save Project', class: "submit" %>
+      </div>
+   </div>   
+  <% end %>

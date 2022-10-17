@@ -1,0 +1,13 @@
+<div class='nested-fields'>
+  <div class="field">
+    <%= f.label :name, class: "label item" %>
+    <%= f.text_field :t_name, class: "text-box item"%>
+  </div>
+  <div class="field">
+    <%= f.label :description, class: "label item" %>
+    <%= f.text_area :t_discription, class: "text-area item"%>
+  </div>
+  <div class="btn s3 item">
+    <%= link_to_remove_association "remove task", f %>
+  </div>
+</div>
